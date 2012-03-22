@@ -19,3 +19,7 @@ filter PBGRP = utils
 # PBREC is replaced by the list of recommandations
 #filter PBREC =
 
+transform PBDESC_libdataseries = PBDESC_libdataseries_raw s/\s+\n/\n/go;
+transform PBDESC_dataseries_utils = PBDESC_dataseries_utils_raw s/\s+\n/\n/go;
+transform PBDESC_libdataseries_dev_doc = PBDESC_libdataseries_dev_doc_raw s/\s+\n/\n/go;
+transform PBDESC_libdataseries_dev = PBDESC_libdataseries_dev_raw s/\s+\n/\n/go;

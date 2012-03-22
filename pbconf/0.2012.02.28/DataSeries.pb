@@ -1,35 +1,21 @@
-#
-# Project Builder configuration file
-# For project DataSeries
-#
-# $Id$
-#
+# Project Builder configuration file for DataSeries
 
-#
-# What is the project URL
-#
-#pburl DataSeries = svn://svn.DataSeries.org/DataSeries/devel
-#pburl DataSeries = svn://svn+ssh.DataSeries.org/DataSeries/devel
-#pburl DataSeries = cvs://cvs.DataSeries.org/DataSeries/devel
-#pburl DataSeries = http://www.DataSeries.org/src/DataSeries-devel.tar.gz
-#pburl DataSeries = ftp://ftp.DataSeries.org/src/DataSeries-devel.tar.gz
-#pburl DataSeries = file:///src/DataSeries-devel.tar.gz
-#pburl DataSeries = dir:///src/DataSeries-devel
+pburl DataSeries = file:///home/anderse/projects/DataSeries-0.2012.02.28.tar.gz
 
 # Repository
-#pbrepo DataSeries = ftp://ftp.DataSeries.org
+pbrepo DataSeries = http://tesla.hpl.hp.com/opensource
 #pbml DataSeries = DataSeries-announce@lists.DataSeries.org
 #pbsmtp DataSeries = localhost
 
 # Check whether project is well formed 
 # when downloading from ftp/http/...
 # (containing already a directory with the project-version name)
-#pbwf DataSeries = 1
+pbwf DataSeries = 1
 
 #
 # Packager label
 #
-#pbpackager DataSeries = William Porte <bill@DataSeries.org>
+pbpackager DataSeries = Eric Anderson <eric.anderson4@hp.com>
 #
 
 # For delivery to a machine by SSH (potentially the FTP server)
@@ -92,20 +78,21 @@
 #
 # Global version/tag for the project
 #
-#projver DataSeries = devel
-#projtag DataSeries = 1
+projver DataSeries = 0.2012.02.28
+projtag DataSeries = 1
 
 # Hash of valid version names
 
 # Additional repository to add at build time
+addrepo deb = http://localhost/pb-pkgs/$pbos->{'name'}/$pbos->{'version'}/Lintel.sources.list
 # addrepo centos-5-x86_64 = http://packages.sw.be/rpmforge-release/rpmforge-release-0.3.6-1.el5.rf.x86_64.rpm,ftp://ftp.project-builder.org/centos/5/pb.repo
 # addrepo centos-5-x86_64 = http://packages.sw.be/rpmforge-release/rpmforge-release-0.3.6-1.el5.rf.x86_64.rpm,ftp://ftp.project-builder.org/centos/5/pb.repo
 #version DataSeries = devel,stable
 
 # Is it a test version or a production version
-testver DataSeries = true
+testver DataSeries = false
 # Which upper target dir for delivery
-delivery DataSeries = test
+delivery DataSeries = production
 
 # Additional repository to add at build time
 # addrepo centos-5-x86_64 = http://packages.sw.be/rpmforge-release/rpmforge-release-0.3.6-1.el5.rf.x86_64.rpm,ftp://ftp.project-builder.org/centos/5/pb.repo
@@ -117,7 +104,7 @@ delivery DataSeries = test
 #pkgver DataSeries = stable
 #pkgtag DataSeries = 3
 # Hash of default package/package directory
-#defpkgdir DataSeries = dir-DataSeries
+defpkgdir DataSeries = DataSeries-0.2012.02.28
 # Hash of additional package/package directory
 #extpkgdir minor-pkg = dir-minor-pkg
 
@@ -130,3 +117,6 @@ delivery DataSeries = test
 # Here perl-xxx for RPMs, libxxx-perl for debs, ...
 # So the package name is indeed virtual
 #namingtype DataSeries = perl
+
+sshhost DataSeries = localhost
+sshdir DataSeries = /home/anderse/cache-project-builder/repos
