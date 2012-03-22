@@ -1,0 +1,27 @@
+#
+# $Id$
+#
+# Filter for rpm build
+#
+
+# PBGRP is replaced by the RPM group of apps
+# Cf: http://fedoraproject.org/wiki/RPMGroups
+#filter PBGRP = Applications/Archiving
+
+# PBLIC is replaced by the license of the application
+# Cf: http://fedoraproject.org/wiki/Licensing
+#filter PBLIC = GPLv2+
+
+# PBDEP is replaced by the list of dependencies
+#filter PBDEP =
+
+# PBSUF is replaced by the package suffix ($pb->{'suf'} in code)
+filter PBSUF = %{dist}
+
+# PBOBS is replaced by the Obsolete line
+#filter PBOBS =
+
+# transform a variable from the key on the right to the key on the left using the perl expression
+# after the input key name.  Useful for taking multi-line documentation and removing trailing spaces
+# or leading spaces.
+#transform PBDESC = PBDESC_raw s/\s+\n/\n/go;
