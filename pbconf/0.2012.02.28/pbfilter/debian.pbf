@@ -9,3 +9,4 @@ filter PBDEBSTD = 3.8.0
 # PBDEBCOMP is replaced by the Debian Compatibility value
 filter PBDEBCOMP = 7
 
+filter PBTEX = texlive-latex-extra, texlive-fonts-recommended, texlive-generic-recommended

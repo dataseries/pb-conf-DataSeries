@@ -3,7 +3,7 @@
 pburl DataSeries = file:///home/anderse/projects/DataSeries-0.2012.02.28.tar.gz
 
 # Repository
-pbrepo DataSeries = http://tesla.hpl.hp.com/opensource
+pbrepo DataSeries = http://localhost/pb-pkgs
 #pbml DataSeries = DataSeries-announce@lists.DataSeries.org
 #pbsmtp DataSeries = localhost
 
@@ -67,6 +67,38 @@ pbpackager DataSeries = Eric Anderson <eric.anderson4@hp.com>
 #
 #velist DataSeries = fedora-7-i386
 
+velist DataSeries =                           \
+    centos-5.2-i386,centos-5.2-x86_64,        \
+    centos-5.3-i386,centos-5.3-x86_64,        \
+    centos-5.4-i386,centos-5.4-x86_64,        \
+    centos-5.5-i386,centos-5.5-x86_64,        \
+    centos-5.6-i386,centos-5.6-x86_64,        \
+    centos-5.7-i386,centos-5.7-x86_64,        \
+    centos-5.8-i386,centos-5.8-x86_64,        \
+    centos-6.0-i386,centos-6.0-x86_64,        \
+    centos-6.1-i386,centos-6.1-x86_64,        \
+    centos-6.2-i386,centos-6.2-x86_64,        \
+    debian-6.0-i386,debian-6.0-x86_64,        \
+    debian-7.0-i386,debian-7.0-x86_64,        \
+    fedora-15-i386,fedora-15-x86_64,          \
+    fedora-16-i386,fedora-16-x86_64,          \
+    opensuse-11.4-i386,opensuse-11.4-x86_64,  \
+    opensuse-12.1-i386,opensuse-12.1-x86_64,  \
+    scilinux-6.0-i386,scilinux-6.0-x86_64,    \
+    scilinux-6.1-i386,scilinux-6.1-x86_64,    \
+    scilinux-6.2-i386,scilinux-6.2-x86_64,    \
+    ubuntu-8.04-i386,ubuntu-8.04-x86_64,      \
+    ubuntu-10.04-i386,ubuntu-10.04-x86_64,    \
+    ubuntu-10.10-i386,ubuntu-10.10-x86_64,    \
+    ubuntu-11.04-i386,ubuntu-11.04-x86_64,    \
+    ubuntu-11.10-i386,ubuntu-11.10-x86_64,    \
+    ubuntu-12.04-i386,ubuntu-12.04-x86_64
+
+install_deps_hook ubuntu-8.04 = sudo apt-get -y --force-yes install texlive-latex-base; \
+     sudo perl -i.bak -ne 's/^(.ifnum.count..)65/${1}99/; print'                        \
+        /usr/share/texmf-texlive/tex/latex/base/latex.ltx;                              \
+     sudo dpkg --configure -a
+
 # VE params
 #vetype DataSeries = chroot
 #ventp default = pool.ntp.org
@@ -84,7 +116,7 @@ projtag DataSeries = 1
 # Hash of valid version names
 
 # Additional repository to add at build time
-addrepo deb = http://localhost/pb-pkgs/$pbos->{'name'}/$pbos->{'version'}/Lintel.sources.list
+addrepo deb = http://localhost/pb-pkgs/production/$pbos->{'name'}/$pbos->{'version'}/Lintel.sources.list
 # addrepo centos-5-x86_64 = http://packages.sw.be/rpmforge-release/rpmforge-release-0.3.6-1.el5.rf.x86_64.rpm,ftp://ftp.project-builder.org/centos/5/pb.repo
 # addrepo centos-5-x86_64 = http://packages.sw.be/rpmforge-release/rpmforge-release-0.3.6-1.el5.rf.x86_64.rpm,ftp://ftp.project-builder.org/centos/5/pb.repo
 #version DataSeries = devel,stable

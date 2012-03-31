@@ -11,6 +11,7 @@ help:
 
 debian/build/config-stamp: 
 	dh_testdir
+	[ ! -d debian/build ] || rm -rf debian/build
 	mkdir -p debian/build
 	# For now, disable data-series-server.  The thrift we have is an old snapshot and isn't
 	# coming from any public packages, but several machines we build on happen to have it

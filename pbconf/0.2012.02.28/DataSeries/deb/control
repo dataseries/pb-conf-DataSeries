@@ -4,8 +4,7 @@ Priority: optional
 Maintainer: PBPACKAGER
 Build-Depends: debhelper (>= 6), cmake, liblintel-dev, lintel-utils, libxml2-dev, zlib1g-dev, 
   libbz2-dev, doxygen, libssl-dev, libpcre3-dev,libpcap-dev, libxml-parser-perl, 
-  libcrypt-rijndael-perl, chrpath, libdigest-sha1-perl, gnuplot, texlive-latex-extra, 
-  texlive-fonts-recommended, texlive-generic-recommended
+  libcrypt-rijndael-perl, chrpath, gnuplot, PBTEX
 Standards-Version: PBDEBSTD
 Vcs-Git: git://www.github.com/eric-anderson/DataSeries
 Vcs-Browser: http://www.github.com/eric-anderson/DataSeries
