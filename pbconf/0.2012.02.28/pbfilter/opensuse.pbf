@@ -1,4 +1,4 @@
 filter PBNONSTANDARD = cmake, chrpath
-filter PBCOMPRESSION = bzip2-devel
-filter PBOPENSSL = openssl-devel
+filter PBCOMPRESSION = libbz2-devel
+filter PBOPENSSL = libopenssl-devel
 filter PBPERL = perl-Crypt-Rijndael
