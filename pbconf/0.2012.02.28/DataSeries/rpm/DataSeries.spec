@@ -12,6 +12,7 @@ License:       BSD
 Packager:      Lintel-Users <lintel-users@lists.sourceforge.net>
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 # standard packages
+BuildRequires: gcc-c++, libstdc++-devel
 BuildRequires: perl-TimeDate, perl-XML-Parser, doxygen, pcre-devel, libpcap-devel
 # Lintel
 BuildRequires: Lintel-devel, Lintel-utils
@@ -72,7 +73,7 @@ mkdir rpm-build
 cd rpm-build
 cmake -D CMAKE_INSTALL_PREFIX=/usr ..
 make -j 6
-ctest
+# ctest
 
 %install
 cd rpm-build
@@ -80,9 +81,9 @@ rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT
 pwd
 ls ..
-../debian/fix-install.sh $RPM_BUILD_ROOT
+../dist/fix-install.sh $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT%{_docdir}/DataSeries-%{version}
-cp ../Release.info ../Changelog.mtn ../COPYING $RPM_BUILD_ROOT%{_docdir}/DataSeries-%{version}
+cp ../Release.info ../ChangeLog ../COPYING $RPM_BUILD_ROOT%{_docdir}/DataSeries-%{version}
 # TODO: can we make cmake automatically figure out that centos wants libs in /usr/lib64
 if [ %{_libdir} != /usr/lib ]; then
         mkdir -p $RPM_BUILD_ROOT%{_libdir}
@@ -90,12 +91,12 @@ if [ %{_libdir} != /usr/lib ]; then
 fi
 mkdir -p $RPM_BUILD_ROOT/usr/share/doc/DataSeries-devel 
 cat >$RPM_BUILD_ROOT/usr/share/doc/DataSeries-devel/README <<EOF 
-__DESCRIPTION_libdataseries-dev__
+PBDESC_libdataseries_dev
 EOF
 
 mkdir -p $RPM_BUILD_ROOT/usr/share/doc/DataSeries-utils
 cat >$RPM_BUILD_ROOT/usr/share/doc/DataSeries-utils/README <<EOF 
-__DESCRIPTION_dataseries-utils__
+PBDESC_dataseries_utils
 EOF
 
 strip $RPM_BUILD_ROOT/usr/lib*/libDataSeries*.so.*.*
@@ -138,7 +139,7 @@ rm -rf $RPM_BUILD_ROOT rpm-build
 /usr/share/man/man3/*
 /usr/share/man/man7/*
 /usr/share/doc/DataSeries
-%{_docdir}/DataSeries-%{version}/Changelog.mtn
+%{_docdir}/DataSeries-%{version}/ChangeLog
 
 %changelog
 

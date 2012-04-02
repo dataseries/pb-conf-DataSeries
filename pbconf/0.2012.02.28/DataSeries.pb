@@ -4,6 +4,7 @@ pburl DataSeries = file:///home/anderse/projects/DataSeries-0.2012.02.28.tar.gz
 
 # Repository
 pbrepo DataSeries = http://localhost/pb-pkgs
+pbgpgcheck DataSeries = 0
 #pbml DataSeries = DataSeries-announce@lists.DataSeries.org
 #pbsmtp DataSeries = localhost
 
@@ -117,6 +118,11 @@ projtag DataSeries = 1
 
 # Additional repository to add at build time
 addrepo deb = http://localhost/pb-pkgs/production/$pbos->{'name'}/$pbos->{'version'}/Lintel.sources.list
+addrepo rpm = http://localhost/pb-pkgs/production/$pbos->{'name'}/$pbos->{'version'}/$pbos->{'arch'}/Lintel.repo
+addrepo centos-5.2 = http://dl.fedoraproject.org/pub/epel/5/$pbos->{'arch'}/cmake-2.6.4-5.el5.2.$pbos->{'arch'}.rpm,http://dl.fedoraproject.org/pub/epel/5/$pbos->{'arch'}/chrpath-0.13-1.1.el5.1.$pbos->{'arch'}.rpm,http://localhost/pb-pkgs/production/$pbos->{'name'}/$pbos->{'version'}/$pbos->{'arch'}/Lintel.repo
+# centos 5.7 got cmake as part of the os repo.
+addrepo centos-5.7 = http://dl.fedoraproject.org/pub/epel/5/$pbos->{'arch'}/chrpath-0.13-1.1.el5.1.$pbos->{'arch'}.rpm,http://localhost/pb-pkgs/production/$pbos->{'name'}/$pbos->{'version'}/$pbos->{'arch'}/Lintel.repo
+
 # addrepo centos-5-x86_64 = http://packages.sw.be/rpmforge-release/rpmforge-release-0.3.6-1.el5.rf.x86_64.rpm,ftp://ftp.project-builder.org/centos/5/pb.repo
 # addrepo centos-5-x86_64 = http://packages.sw.be/rpmforge-release/rpmforge-release-0.3.6-1.el5.rf.x86_64.rpm,ftp://ftp.project-builder.org/centos/5/pb.repo
 #version DataSeries = devel,stable
