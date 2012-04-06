@@ -110,7 +110,6 @@ mkdir -p $RPM_BUILD_ROOT/usr/share/perl5/DataSeries
 
 %clean
 rm -rf $RPM_BUILD_ROOT rpm-build
-./redhat/rules clean
 
 %files libs
 %{_libdir}/libDataSeries.so.*

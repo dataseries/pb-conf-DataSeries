@@ -1,6 +1,6 @@
 # Project Builder configuration file for DataSeries
 
-pburl DataSeries = file:///home/anderse/projects/DataSeries-0.2012.02.28.tar.gz
+pburl DataSeries = http://localhost/pb-sources/DataSeries-0.2012.02.28.tar.gz
 
 # Repository
 pbrepo DataSeries = http://localhost/pb-pkgs
@@ -155,6 +155,3 @@ defpkgdir DataSeries = DataSeries-0.2012.02.28
 # Here perl-xxx for RPMs, libxxx-perl for debs, ...
 # So the package name is indeed virtual
 #namingtype DataSeries = perl
-
-sshhost DataSeries = localhost
-sshdir DataSeries = /home/anderse/cache-project-builder/repos
