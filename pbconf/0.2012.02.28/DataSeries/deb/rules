@@ -28,7 +28,7 @@ build-stamp:  debian/build/config-stamp
 #	-(cd debian/build && ctest -V -R lsfdsplots)
 #	-(cd debian/build && ctest -V -R nfsdsanalysis)
 #	-sleep 3600
-#	(cd debian/build && ctest)
+	(cd debian/build && ctest)
 
 	touch $@
 
