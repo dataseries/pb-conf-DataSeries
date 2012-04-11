@@ -13,7 +13,7 @@ Packager:      Lintel-Users <lintel-users@lists.sourceforge.net>
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 # standard packages
 BuildRequires: gcc-c++, libstdc++-devel
-BuildRequires: perl-TimeDate, perl-XML-Parser, doxygen, pcre-devel, libpcap-devel
+BuildRequires: perl-TimeDate, perl-XML-Parser, doxygen, pcre-devel, libpcap-devel, gnuplot
 # Lintel
 BuildRequires: Lintel-devel, Lintel-utils
 BuildRequires: PBNONSTANDARD
