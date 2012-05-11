@@ -1,3 +1,8 @@
+#
+# (c) Copyright 2012, Hewlett-Packard Development Company, LP
+#
+#  See the file named COPYING for license details
+#
 # Project Builder configuration file for DataSeries
 
 pburl DataSeries = http://localhost/pb-sources/DataSeries-0.2012.02.28.tar.gz

@@ -1,6 +1,12 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
+#
+# (c) Copyright 2012, Hewlett-Packard Development Company, LP
+#
+#  See the file named COPYING for license details
+#
+
 # TODO: once we stop supporting lenny, upgrade to using the dh command.
 
 #export DH_VERBOSE=1
