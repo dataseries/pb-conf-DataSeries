@@ -121,7 +121,7 @@ rm -rf $RPM_BUILD_ROOT rpm-build
 %{_bindir}/dataseries-config
 %{_libdir}/libDataSeries*.so
 /usr/share/doc/DataSeries-devel/README
-/usr/share/cmake-modules
+/usr/share/cmake*/Modules
 
 %files utils
 # skip dataseries-config

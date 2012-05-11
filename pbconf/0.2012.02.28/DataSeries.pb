@@ -4,7 +4,8 @@ pburl DataSeries = http://localhost/pb-sources/DataSeries-0.2012.02.28.tar.gz
 
 # Repository
 pbrepo DataSeries = http://localhost/pb-pkgs
-pbgpgcheck DataSeries = 0
+pbdebcomponent DataSeries = main
+pbgpgcheck DataSeries = 1
 #pbml DataSeries = DataSeries-announce@lists.DataSeries.org
 #pbsmtp DataSeries = localhost
 
