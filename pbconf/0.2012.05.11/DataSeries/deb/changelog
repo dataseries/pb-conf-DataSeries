@@ -1,8 +1,8 @@
-dataseries (0.2012.02.28) unstable; urgency=low
+dataseries (0.2012.05.11) unstable; urgency=low
 
-  * release testing
+  * Release.  See NEWS for major changes.
 
- -- Eric Anderson <anderse@hpl.hp.com>  Thu, 01 Mar 2012 14:49:49 -0800
+ -- Eric Anderson <anderse@build-debian-1.u.hpl.hp.com>  Fri, 11 May 2012 01:39:34 -0700
 
 dataseries (0.2011.06.13) unstable; urgency=low
 

@@ -5,7 +5,7 @@
 #
 # Project Builder configuration file for DataSeries
 
-pburl DataSeries = http://localhost/pb-sources/DataSeries-0.2012.02.28.tar.gz
+pburl DataSeries = http://localhost/pb-sources/DataSeries-0.2012.05.11.tar.gz
 
 # Repository
 pbrepo DataSeries = http://localhost/pb-pkgs
@@ -22,7 +22,7 @@ pbwf DataSeries = 1
 #
 # Packager label
 #
-pbpackager DataSeries = Eric Anderson <eric.anderson4@hp.com>
+pbpackager DataSeries = Eric Anderson <eric.anderson12345+dataseries@gmail.com>
 #
 
 # For delivery to a machine by SSH (potentially the FTP server)
@@ -117,7 +117,7 @@ install_deps_hook ubuntu-8.04 = sudo apt-get -y --force-yes install texlive-late
 #
 # Global version/tag for the project
 #
-projver DataSeries = 0.2012.02.28
+projver DataSeries = 0.2012.05.11
 projtag DataSeries = 1
 
 # Hash of valid version names
@@ -148,7 +148,7 @@ delivery DataSeries = production
 #pkgver DataSeries = stable
 #pkgtag DataSeries = 3
 # Hash of default package/package directory
-defpkgdir DataSeries = DataSeries-0.2012.02.28
+defpkgdir DataSeries = DataSeries-0.2012.05.11
 # Hash of additional package/package directory
 #extpkgdir minor-pkg = dir-minor-pkg
 
