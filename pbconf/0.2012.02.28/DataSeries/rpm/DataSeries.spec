@@ -36,7 +36,7 @@ License:        BSD
 Summary:        DataSeries development files
 Group:          Development/Libraries
 Requires:       %{name}-libs = %{version}-%{release}
-Requires:       cmake
+Requires:       cmake, Lintel-devel
 License:        BSD
 
 %package	utils
